@@ -21,16 +21,15 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 """
 
 
-class Solution:
-    def isPalindrome(self, x: int) -> bool:
-        if x < 0:
+def isPalindrome(x: int):
+    a = x
+    string = str(x)
+    reversedStr = string[::-1]
+    try:
+        if a == int(reversedStr):
+            return True
+
+        else:
             return False
-        string = str(x)
-        reversedStr = string[::-1]
-        try:
-            if x == int(reversedStr):
-                return True
-            else:
-                return False
-        except:
-            return False
+    except:
+        return False
